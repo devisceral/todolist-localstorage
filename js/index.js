@@ -1,9 +1,9 @@
-const text = document.querySelector("input");
+const textInput = document.querySelector("input");
 const btnInsert = document.querySelector(".divInsert button");
 const btnDeleteAll = document.querySelector(".header button");
 const ul = document.querySelector("ul");
 
-var itensDB = []
+let itensDB = []
 
 // Delete All items
 
@@ -14,8 +14,8 @@ btnDeleteAll.onclick = () => {
 
 // Input Event
 
-text.addEventListener("keypress", e => {
-  if(e.key == "Enter" && text.value !== ""){
+textInput.addEventListener("keypress", e => {
+  if(e.key == "Enter" && textInput.value != ""){
     setItemDB()
   }
 });
@@ -23,7 +23,7 @@ text.addEventListener("keypress", e => {
 // Event Click
 
 btnInsert.onclick = () => {
-  if(text.value !== "") {
+  if(textInput.value != "") {
     setItemDB()
   }
 }
@@ -36,7 +36,7 @@ function setItemDB() {
     return
   }
 
-  itensDB.push({"item" : text.value, "status": ""})
+  itensDB.push({"item" : textInput.value, "status": ""})
   updateDB()
 }
 
@@ -77,7 +77,7 @@ function insertItemScreen(text, status, i) {
     document.querySelector(`[data-si="${i}"]`).classList.remove('line-through')
   }
 
-  text.value = ''
+  textInput.value = "";
 }
 
 // function done checkbox
