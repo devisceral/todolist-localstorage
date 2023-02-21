@@ -39,7 +39,7 @@ ul {
 
 .container {
   margin-top: 40px;
-  width: 80%;
+  width: 60%;
 }
 
 .textInsert {
@@ -75,3 +75,55 @@ button {
   color: white;
 }
 
+.divLi {
+  margin-top: 20px;
+  padding: 10px;
+  background: lightgray;
+  border-radius: 10px;
+  box-shadow: 6px 5px 10px 0px grey;
+  display: flex;
+  align-items: center;
+}
+
+.divLi span {
+  width: 80%;
+  color: dimgray;
+}
+
+.divLi input {
+  width: 10%;
+  outline: none;
+  accent-color: currentcolor;
+}
+
+.divLi i {
+  font-size: 22px;
+  color: brown;
+}
+
+li {
+  list-style-type: none;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+@media (max-width: 775px){
+  input {
+    width: 70%;
+  }
+
+  .divInsert button {
+    width: 30%;
+  }
+
+  i {
+    font-size: 30px;
+    padding: 0px;
+  }
+
+  p {
+    font-size: x-large;
+  }
+}
